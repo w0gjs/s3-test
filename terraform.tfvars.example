@@ -1,0 +1,10 @@
+# Copy this file to terraform.tfvars and fill in your own values
+# DO NOT commit terraform.tfvars to version control
+
+aws_region             = "us-east-1"
+environment            = "dev"
+project_name           = "s3-audit-test"
+bucket_name            = "my-audit-bucket-dev"
+enable_versioning      = true
+enable_mfa_delete      = false
+kms_key_deletion_window = 10
