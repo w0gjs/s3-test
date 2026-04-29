@@ -485,38 +485,7 @@ AML 자료 보관 기준 준용
 
 ## **아키텍처 개요**
 
-```
-Development Account
-    └─ 비운영 테스트 데이터
-
-                    ↓
-                    
-Production Account
-├─ regulated-records-1y (1년 보관)
-├─ regulated-records-5y (5년 보관)
-├─ aml (AML 자료, 5년 보관)
-├─ backups (DB/설정 백업)
-└─ athena-results (조회 결과)
-   ├─ ops/ (운영 분석)
-   ├─ sc-audit/ (보안 감사)
-   ├─ pi-access/ (개인정보)
-   ├─ transactions/ (거래기록)
-   ├─ aml-result/ (AML 분석)
-   └─ compliance-result/ (컴플라이언스)
-
-                    ↓
-                    
-Audit Account
-├─ audit-log (감사 로그 중앙 수집)
-│  ├─ CloudTrail
-│  ├─ VPC Flow Logs
-│  ├─ WAF Logs
-│  └─ System Logs
-└─ compliance (규제 준수 자료)
-   ├─ 월간 감사보고서
-   ├─ ISMS-P 점검 결과
-   └─ 규제 준수 점검표
-```
+![S3 Bucket Architecture](s3%20간단.drawio.png)
 
 ---
 
